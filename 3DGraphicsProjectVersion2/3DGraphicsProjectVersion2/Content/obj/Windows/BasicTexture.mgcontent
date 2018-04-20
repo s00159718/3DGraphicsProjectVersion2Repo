@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>c:/users/james/documents/visual studio 2015/Projects/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/BasicTexture.fx</SourceFile>
+  <SourceTime>2018-02-12T14:26:22+00:00</SourceTime>
+  <DestFile>c:/users/james/documents/visual studio 2015/Projects/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/bin/Windows/BasicTexture.xnb</DestFile>
+  <DestTime>2018-04-20T15:03:28.3142298+01:00</DestTime>
+  <Importer>EffectImporter</Importer>
+  <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
+  <Processor>EffectProcessor</Processor>
+  <ProcessorTime>2017-03-01T15:05:36+00:00</ProcessorTime>
+  <Parameters>
+    <Key>DebugMode</Key>
+    <Value>Auto</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
