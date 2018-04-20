@@ -23,3 +23,28 @@ c:\users\james\documents\visual studio 2015\Projects\3DGraphicsProjectVersion2\3
 c:\users\james\documents\visual studio 2015\Projects\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.csprojResolveAssemblyReference.cache
 c:\users\james\documents\visual studio 2015\Projects\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.exe
 c:\users\james\documents\visual studio 2015\Projects\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.pdb
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.exe
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.pdb
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\BasicTexture.xnb
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\models\wolf.xnb
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\3DGraphicsProjectVersion2.exe
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\3DGraphicsProjectVersion2.pdb
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.csprojResolveAssemblyReference.cache
