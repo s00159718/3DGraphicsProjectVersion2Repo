@@ -20,6 +20,7 @@ namespace _3DGraphicsProjectVersion2
             public float Attenuation { get; set; }
             public float FallOff { get; set; }
             public Texture2D Texture { get; set; }
+            public Texture2D SecondTexture { get; set; }
 
             public override void SetEffectParameters(Effect effect)
             {

@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CustomEffectModel.cs" />
+    <Compile Include="DirectionalLightModel.cs" />
     <Compile Include="Engine\Camera.cs" />
     <Compile Include="Engine\DebugEngine.cs" />
     <Compile Include="Engine\GameObject3D.cs" />

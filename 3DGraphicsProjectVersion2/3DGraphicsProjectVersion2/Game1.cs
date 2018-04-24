@@ -21,6 +21,8 @@ namespace _3DGraphicsProjectVersion2
         List<CustomEffectModel> gameObjects = new List<CustomEffectModel>();
         Camera mainCamera;
 
+        Effect pointLightEffect;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -73,7 +75,7 @@ namespace _3DGraphicsProjectVersion2
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            AddModel(new PointLightModel("wolf", new Vector3(0, 2f, -1000)));
+            AddModel(new PointLightModel("wolf", new Vector3(0, 2f, -800)));
 
             SetupEffectAndRenderTargets();
 
@@ -166,6 +168,8 @@ namespace _3DGraphicsProjectVersion2
 
         private void SetupEffectAndRenderTargets()
         {
+            pointLightEffect = Content.Load<Effect>("PointLight");
+
             lightMapEffect = Content.Load<Effect>("effects\\LightMapEffect");
             PointLightMesh = Content.Load<Model>("models\\LightMesh");
             PointLightMesh.Meshes[0].MeshParts[0].Effect = lightMapEffect;
@@ -175,7 +179,7 @@ namespace _3DGraphicsProjectVersion2
                 GraphicsDevice.Viewport.Width,
                 GraphicsDevice.Viewport.Height);
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Lights.Add(new PointLightModel.PointLightMaterial()
                 {
