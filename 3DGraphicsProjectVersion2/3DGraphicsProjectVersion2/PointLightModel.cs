@@ -56,7 +56,7 @@ namespace _3DGraphicsProjectVersion2
 
         public override void LoadContent()
         {
-            customEffect = GameUtilities.Content.Load<Effect>("effects\\FinalLightEffect");
+            customEffect = GameUtilities.Content.Load<Effect>("effects\\PointLight");
 
             customEffect.Parameters["Texture"].SetValue(GameUtilities.Content.Load<Texture2D>("textures/camo"));
             customEffect.Parameters["TextureEnabled"].SetValue(true);

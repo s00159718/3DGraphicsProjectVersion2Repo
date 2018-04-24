@@ -75,7 +75,7 @@ namespace _3DGraphicsProjectVersion2
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            AddModel(new PointLightModel("wolf", new Vector3(0, 2f, -800)));
+            AddModel(new PointLightModel("rat", new Vector3(0, 1f, -100)));
 
             SetupEffectAndRenderTargets();
 
@@ -179,12 +179,12 @@ namespace _3DGraphicsProjectVersion2
                 GraphicsDevice.Viewport.Width,
                 GraphicsDevice.Viewport.Height);
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 50; i++)
             {
                 Lights.Add(new PointLightModel.PointLightMaterial()
                 {
                     AmbientColour = new Color(.15f, .15f, .15f),
-                    Position = PickRandomPosition(-100, 100),
+                    Position = PickRandomPosition(-70, 120),
                     LightColour = PickRandomColor(),
                     Attenuation = 50,
                     FallOff = 100,

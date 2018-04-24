@@ -14,5 +14,8 @@
     <File>C:/Users/James/Documents/GitHub/3DGraphicsProjectVersion2Repo/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/effects/LightMapEffect.fx</File>
     <File>C:/Users/James/Documents/GitHub/3DGraphicsProjectVersion2Repo/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/effects/PointLight.fx</File>
     <File>C:/Users/James/Documents/GitHub/3DGraphicsProjectVersion2Repo/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/models/LightMesh.fbx</File>
+    <File>C:/Users/James/Documents/GitHub/3DGraphicsProjectVersion2Repo/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/models/rat.fbx</File>
+    <File>C:/Users/James/Documents/GitHub/3DGraphicsProjectVersion2Repo/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/normalMaps/FurNormalMap.png</File>
+    <File>C:/Users/James/Documents/GitHub/3DGraphicsProjectVersion2Repo/3DGraphicsProjectVersion2/3DGraphicsProjectVersion2/Content/textures/fur.jpg</File>
   </SourceFiles>
 </SourceFileCollection>
