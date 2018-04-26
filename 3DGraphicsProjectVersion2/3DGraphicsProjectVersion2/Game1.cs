@@ -74,11 +74,8 @@ namespace _3DGraphicsProjectVersion2
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
             AddModel(new PointLightModel("rat", new Vector3(0, 1f, -100)));
-
-            SetupEffectAndRenderTargets();
-
+            CreateLights();
             GameUtilities.Random = new System.Random();
         }
 
@@ -119,8 +116,6 @@ namespace _3DGraphicsProjectVersion2
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
             foreach (var gameObject in gameObjects)
             {
                 if (FrustumContains((gameObject as SimpleModel).AABB))
@@ -132,7 +127,6 @@ namespace _3DGraphicsProjectVersion2
             debug.Draw(mainCamera);
 
             spriteBatch.Begin();
-
             spriteBatch.End();
 
             GameUtilities.SetGraphicsDeviceFor3D();
@@ -149,10 +143,9 @@ namespace _3DGraphicsProjectVersion2
 
         List<Material> Lights = new List<Material>();
 
-        private void SetupEffectAndRenderTargets()
+        private void CreateLights()
         {
             pointLightEffect = Content.Load<Effect>("PointLight");
-
             for (int i = 0; i < 3; i++)
             {
                 Lights.Add(new PointLightModel.PointLightMaterial()
@@ -161,7 +154,7 @@ namespace _3DGraphicsProjectVersion2
                     Position = PickRandomPosition(-70, 120),
                     LightColour = PickRandomColor(),
                     Attenuation = 50,
-                    FallOff = 100,
+                    FallOff = 50,
                 });
             }
         }
