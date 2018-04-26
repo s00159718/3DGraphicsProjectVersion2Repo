@@ -59,5 +59,3 @@ C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectV
 C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\effects\PointLight.xnb
 C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\models\LightMesh.xnb
 C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\models\rat.xnb
-C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\normalMaps\FurNormalMap.xnb
-C:\Users\James\Documents\GitHub\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\textures\fur.xnb

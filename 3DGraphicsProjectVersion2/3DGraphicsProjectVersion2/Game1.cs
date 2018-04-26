@@ -23,15 +23,6 @@ namespace _3DGraphicsProjectVersion2
 
         Effect pointLightEffect;
 
-        Effect depthAndNormalEffect;
-        RenderTarget2D depthTarget;
-        RenderTarget2D normalTarget;
-        RenderTarget2D lightTarget;
-
-        Effect lightMapEffect;
-        Model PointLightMesh;
-        List<Material> Lights = new List<Material>();
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -64,6 +55,99 @@ namespace _3DGraphicsProjectVersion2
             base.Initialize();
         }
 
+        public Vector3 PickRandomPosition(int min, int max)
+        {
+            return new Vector3(
+                GameUtilities.Random.Next(min, max),
+                GameUtilities.Random.Next(0, 100),
+                GameUtilities.Random.Next(min, max));
+        }
+
+        public Color PickRandomColor()
+        {
+            return new Color(
+                GameUtilities.Random.Next(1, 255),
+                GameUtilities.Random.Next(1, 255),
+                GameUtilities.Random.Next(1, 255));
+        }
+
+        protected override void LoadContent()
+        {
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            AddModel(new PointLightModel("rat", new Vector3(0, 1f, -100)));
+
+            SetupEffectAndRenderTargets();
+
+            GameUtilities.Random = new System.Random();
+        }
+
+        public void AddModel(CustomEffectModel Model)
+        {
+            Model.Initialize();
+            Model.LoadContent();
+
+            gameObjects.Add(Model);
+        }
+
+        protected override void UnloadContent()
+        {
+
+        }
+
+        protected override void Update(GameTime gameTime)
+        {
+            GameUtilities.Time = gameTime;
+            if(InputEngine.IsKeyHeld(Keys.Escape))
+            {
+                Exit();
+            }
+
+            mainCamera.Update();
+
+            gameObjects.ForEach(go => go.Update());
+
+            foreach (var l in Lights.OfType<PointLightModel.PointLightMaterial>())
+            {
+                DebugEngine.AddBoundingSphere(new BoundingSphere(l.Position, l.Attenuation), l.DiffuseColour);
+            }
+
+            base.Update(gameTime);
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            DrawDepthAndNormalMaps(mainCamera);
+            DrawLightMap(mainCamera);
+            PrepareMainPass(mainCamera);
+
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            foreach (var gameObject in gameObjects)
+            {
+                if (FrustumContains((gameObject as SimpleModel).AABB))
+                {
+                    gameObject.Draw(mainCamera);
+                    objectsDrawn++;
+                }
+            }
+
+            debug.Draw(mainCamera);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(normalTarget, new Rectangle(10, 10, 400, 200), Color.White);
+            spriteBatch.Draw(depthTarget, new Rectangle(435, 10, 400, 200), Color.White);
+            spriteBatch.Draw(lightTarget, new Rectangle(860, 10, 400, 200), Color.White);
+
+            spriteBatch.End();
+
+            GameUtilities.SetGraphicsDeviceFor3D();
+
+            base.Draw(gameTime);
+        }
+
         int objectsDrawn = 0;
 
         public bool FrustumContains(BoundingBox aabb)
@@ -72,6 +156,15 @@ namespace _3DGraphicsProjectVersion2
                 return true;
             else return false;
         }
+
+        Effect depthAndNormalEffect;
+        RenderTarget2D depthTarget;
+        RenderTarget2D normalTarget;
+        RenderTarget2D lightTarget;
+
+        Effect lightMapEffect;
+        Model PointLightMesh;
+        List<Material> Lights = new List<Material>();
 
         private void SetupEffectAndRenderTargets()
         {
@@ -90,7 +183,7 @@ namespace _3DGraphicsProjectVersion2
             {
                 Lights.Add(new PointLightModel.PointLightMaterial()
                 {
-                    AmbientColour = new Color(200f, 200f, 200f),
+                    AmbientColour = new Color(.15f, .15f, .15f),
                     Position = PickRandomPosition(-70, 120),
                     LightColour = PickRandomColor(),
                     Attenuation = 50,
@@ -192,99 +285,6 @@ namespace _3DGraphicsProjectVersion2
                     }
                 }
             }
-        }
-
-        public Vector3 PickRandomPosition(int min, int max)
-        {
-            return new Vector3(
-                GameUtilities.Random.Next(min, max),
-                GameUtilities.Random.Next(0, 100),
-                GameUtilities.Random.Next(min, max));
-        }
-
-        public Color PickRandomColor()
-        {
-            return new Color(
-                GameUtilities.Random.Next(1, 255),
-                GameUtilities.Random.Next(1, 255),
-                GameUtilities.Random.Next(1, 255));
-        }
-
-        protected override void LoadContent()
-        {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            AddModel(new PointLightModel("rat", new Vector3(0, 0, -100)));
-
-            SetupEffectAndRenderTargets();
-
-            GameUtilities.Random = new System.Random();
-        }
-
-        public void AddModel(CustomEffectModel Model)
-        {
-            Model.Initialize();
-            Model.LoadContent();
-
-            gameObjects.Add(Model);
-        }
-
-        protected override void UnloadContent()
-        {
-
-        }
-
-        protected override void Update(GameTime gameTime)
-        {
-            GameUtilities.Time = gameTime;
-            if(InputEngine.IsKeyHeld(Keys.Escape))
-            {
-                Exit();
-            }
-
-            mainCamera.Update();
-
-            gameObjects.ForEach(go => go.Update());
-
-            foreach (var l in Lights.OfType<PointLightModel.PointLightMaterial>())
-            {
-                DebugEngine.AddBoundingSphere(new BoundingSphere(l.Position, l.Attenuation), l.DiffuseColour);
-            }
-
-            base.Update(gameTime);
-        }
-
-        protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            DrawDepthAndNormalMaps(mainCamera);
-            DrawLightMap(mainCamera);
-            PrepareMainPass(mainCamera);
-
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            foreach (var gameObject in gameObjects)
-            {
-                if (FrustumContains((gameObject as SimpleModel).AABB))
-                {
-                    gameObject.Draw(mainCamera);
-                    objectsDrawn++;
-                }
-            }
-
-            debug.Draw(mainCamera);
-
-            spriteBatch.Begin();
-            spriteBatch.Draw(normalTarget, new Rectangle(10, 10, 400, 200), Color.White);
-            spriteBatch.Draw(depthTarget, new Rectangle(435, 10, 400, 200), Color.White);
-            spriteBatch.Draw(lightTarget, new Rectangle(860, 10, 400, 200), Color.White);
-
-            spriteBatch.End();
-
-            GameUtilities.SetGraphicsDeviceFor3D();
-
-            base.Draw(gameTime);
         }
 
     }
