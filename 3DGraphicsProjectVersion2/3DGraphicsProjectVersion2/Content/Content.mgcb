@@ -13,37 +13,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin models/wolf.fbx
-/importer:FbxImporter
-/processor:ModelProcessor
-/processorParam:ColorKeyColor=0,0,0,0
-/processorParam:ColorKeyEnabled=True
-/processorParam:DefaultEffect=BasicEffect
-/processorParam:GenerateMipmaps=True
-/processorParam:GenerateTangentFrames=False
-/processorParam:PremultiplyTextureAlpha=True
-/processorParam:PremultiplyVertexColors=True
-/processorParam:ResizeTexturesToPowerOfTwo=False
-/processorParam:RotationX=0
-/processorParam:RotationY=0
-/processorParam:RotationZ=0
-/processorParam:Scale=1
-/processorParam:SwapWindingOrder=False
-/processorParam:TextureFormat=Compressed
-/build:models/wolf.fbx
-
-#begin BasicTexture.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:BasicTexture.fx
-
-#begin BasicColor.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:BasicColor.fx
-
 #begin textures/camo.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -55,30 +24,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:textures/camo.png
-
-#begin effects/CaptureDepthAndNormal.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:effects/CaptureDepthAndNormal.fx
-
-#begin effects/CaptureDepthAndNormals.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:effects/CaptureDepthAndNormals.fx
-
-#begin effects/FinalLightEffect.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:effects/FinalLightEffect.fx
-
-#begin effects/LightMapEffect.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:effects/LightMapEffect.fx
 
 #begin effects/PointLight.fx
 /importer:EffectImporter
