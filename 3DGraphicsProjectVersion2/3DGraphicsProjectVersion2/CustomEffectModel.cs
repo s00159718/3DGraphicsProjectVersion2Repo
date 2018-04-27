@@ -21,11 +21,8 @@ namespace _3DGraphicsProjectVersion2
         public override void LoadContent()
         {
             base.LoadContent();
-
             if (Model != null)
             {
-                GenerateMeshTag();
-
                 if (customEffect != null)
                 {
                     foreach (var mesh in Model.Meshes)

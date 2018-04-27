@@ -21,8 +21,6 @@ namespace _3DGraphicsProjectVersion2
         List<CustomEffectModel> gameObjects = new List<CustomEffectModel>();
         Camera mainCamera;
 
-        Effect pointLightEffect;
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -74,8 +72,7 @@ namespace _3DGraphicsProjectVersion2
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            AddModel(new PointLightModel("rat", new Vector3(0, 1f, -100)));
-            CreateLights();
+            AddModel(new PointLightModel("rat", new Vector3(0, 0, 0)));
             GameUtilities.Random = new System.Random();
         }
 
@@ -101,14 +98,7 @@ namespace _3DGraphicsProjectVersion2
             }
 
             mainCamera.Update();
-
             gameObjects.ForEach(go => go.Update());
-
-            foreach (var l in Lights.OfType<PointLightModel.PointLightMaterial>())
-            {
-                DebugEngine.AddBoundingSphere(new BoundingSphere(l.Position, l.Attenuation), l.DiffuseColour);
-            }
-
             base.Update(gameTime);
         }
 
@@ -139,24 +129,6 @@ namespace _3DGraphicsProjectVersion2
             if (mainCamera.Frustum.Contains(aabb) != ContainmentType.Disjoint)
                 return true;
             else return false;
-        }
-
-        List<Material> Lights = new List<Material>();
-
-        private void CreateLights()
-        {
-            pointLightEffect = Content.Load<Effect>("PointLight");
-            for (int i = 0; i < 3; i++)
-            {
-                Lights.Add(new PointLightModel.PointLightMaterial()
-                {
-                    AmbientColour = new Color(.15f, .15f, .15f),
-                    Position = PickRandomPosition(-70, 120),
-                    LightColour = PickRandomColor(),
-                    Attenuation = 50,
-                    FallOff = 50,
-                });
-            }
         }
     }
 }
