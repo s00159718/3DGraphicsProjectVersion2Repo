@@ -31,9 +31,9 @@ namespace _3DGraphicsProjectVersion2
                 FallOff = new float[3];
                 SpecularColor = new Vector3[3];
 
-                Position[0] = new Vector3(20, 0, 0);
-                Position[1] = new Vector3(0, 20, 0);
-                Position[2] = new Vector3(0, 0, 20);
+                Position[0] = new Vector3(50, 0, 0);
+                Position[1] = new Vector3(0, 50, 0);
+                Position[2] = new Vector3(0, 0, 50);
 
                 LightColor[0] = Color.Red.ToVector3();
                 LightColor[1] = Color.Green.ToVector3();
@@ -44,12 +44,12 @@ namespace _3DGraphicsProjectVersion2
                 Attenuation[2] = 150;
 
                 FallOff[0] = 2;
-                FallOff[1] = 5;
-                FallOff[2] = 2;
+                FallOff[1] = 4;
+                FallOff[2] = 6;
 
-                SpecularColor[0] = new Vector3(0.5f, 0.1f, 0.1f);
-                SpecularColor[1] = new Vector3(0.1f, 0.1f, 0.1f);
-                SpecularColor[2] = new Vector3(0.1f, 0.1f, 0.1f);
+                SpecularColor[0] = new Vector3(0.1f, 0.1f, 0.1f);
+                SpecularColor[1] = new Vector3(0.2f, 0.1f, 0.1f);
+                SpecularColor[2] = new Vector3(0.3f, 0.1f, 0.1f);
             }
 
             public override void Update()
@@ -108,14 +108,14 @@ namespace _3DGraphicsProjectVersion2
 
         public override void Update()
         {
-            if(InputEngine.IsKeyPressed(Keys.T) && (customEffect.Parameters["TextureEnabled"] == true))
-            {
-                customEffect.Parameters["TextureEnabled"].SetValue(false);
-            }
-            else if (InputEngine.IsKeyPressed(Keys.T) && (customEffect.Parameters["TextureEnabled"] == false))
-            {
-                customEffect.Parameters["TextureEnabled"].SetValue(true);
-            }
+            //if(InputEngine.IsKeyPressed(Keys.T) && (customEffect.Parameters["TextureEnabled"] == true))
+            //{
+            //    customEffect.Parameters["TextureEnabled"].SetValue(false);
+            //}
+            //else if (InputEngine.IsKeyPressed(Keys.T) && (customEffect.Parameters["TextureEnabled"] == false))
+            //{
+            //    customEffect.Parameters["TextureEnabled"].SetValue(true);
+            //}
 
             base.Update();
         }

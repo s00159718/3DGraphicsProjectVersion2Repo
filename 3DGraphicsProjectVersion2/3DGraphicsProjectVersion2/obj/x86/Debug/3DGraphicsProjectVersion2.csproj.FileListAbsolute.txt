@@ -124,3 +124,5 @@ C:\Users\s00159718\Documents\asdf\3DGraphicsProjectVersion2\3DGraphicsProjectVer
 C:\Users\s00159718\Documents\asdf\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\models\house.xnb
 C:\Users\s00159718\Documents\asdf\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\textures\white.xnb
 C:\Users\s00159718\Documents\asdf\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\bin\Windows\x86\Debug\Content\textures\white_0.xnb
+C:\Users\James\Source\Repos\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.exe
+C:\Users\James\Source\Repos\3DGraphicsProjectVersion2Repo\3DGraphicsProjectVersion2\3DGraphicsProjectVersion2\obj\x86\Debug\3DGraphicsProjectVersion2.pdb
